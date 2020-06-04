@@ -1,6 +1,17 @@
 ScratchABit
 ===========
 
+About this fork
+----------------------
+
+I created this fork specifically to work with ESP8266 firmware. It is mostly identical to the original ScratchABit repo, except I have added the ESP8266 bootloader, an arbitrary firmware, the address table, and the definition file for ESP8266. To disassemble the ESP8266 bootrom, simply run the following:
+
+    python3 ScratchABit.py esp8266.def
+
+Please note that the address table (bootrom.ld) only defines function entries within the bootloader; therefore, the firmware cannot currently be disassembled. A future update should rectify this.
+
+What follows is the original README from author pfalcon:
+
 ScratchABit is an interactive incremental disassembler with data/control
 flow analysis capabilities. ScratchABit is dedicated to the efforts of
 the OpenSource reverse engineering community (reverse engineering to
