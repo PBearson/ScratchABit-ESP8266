@@ -1,0 +1,14 @@
+cpu xtensa
+show bytes 4
+
+# Firmware
+area .bin 0x4010f29c(0x00568) rx
+load recovered_file_updated 0x4010f29c
+
+# Bootloader
+area .bin 0x40000000(0x10000) rx
+load bootrom.bin 0x40000000
+
+# Function entries
+[entrypoints]
+load "bootrom.ld"
