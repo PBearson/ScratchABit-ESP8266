@@ -12,6 +12,8 @@ Please note that the address table (bootrom.ld) only defines function entries wi
 
 What follows is the original README from author pfalcon:
 
+----------------------
+
 ScratchABit is an interactive incremental disassembler with data/control
 flow analysis capabilities. ScratchABit is dedicated to the efforts of
 the OpenSource reverse engineering community (reverse engineering to
