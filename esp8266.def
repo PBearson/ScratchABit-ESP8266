@@ -1,14 +1,13 @@
 cpu xtensa
 show bytes 4
 
-# Firmware
-area .bin 0x4010f000(0x568) rx
-load esp8266-firmware 0x4010f000
+area .irom 0x40200000(0x100000) rx
+load hello.ino.bin 0x40200000
 
-# Bootloader
-area .bin 0x40000000(0x10000) rx
-load bootrom.bin 0x40000000
+# Eboot
+area .eboot 0x4010f000(0x1000) rx
+load eboot.elf elf
 
 # Function entries
 [entrypoints]
-load "bootrom.ld"
+load "addresses.ld"
