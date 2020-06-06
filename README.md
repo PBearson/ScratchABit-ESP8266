@@ -4,11 +4,13 @@ ScratchABit
 About this fork
 ----------------------
 
-I created this fork specifically to work with ESP8266 firmware. It is mostly identical to the original ScratchABit repo, except I have added the ESP8266 bootloader, an arbitrary firmware, the address table, and the definition file for ESP8266. I have also added the Xtensa plugin module under the 'plugins/cpu' directory. To disassemble the ESP8266 bootrom, simply run the following:
+I created this fork specifically to work with ESP8266 firmware. It is mostly identical to the original ScratchABit repo, except I have added the ESP8266 Arduino bootloader, an arbitrary firmware, the address table, and the definition file for ESP8266. I have also added the Xtensa plugin module under the 'plugins/cpu' directory. The attached firmware (hello.ino.bin) is a simple executable, and its source code and ELF file are also included.
+
+To disassemble the ESP8266 bootrom, simply run the following:
 
     python3 ScratchABit.py esp8266.def
 
-Please note that the address table (bootrom.ld) only defines function entries within the bootloader; therefore, the firmware cannot currently be disassembled. A future update should rectify this.
+Please note that the address table (addresses.ld) is currently incomplete. 
 
 What follows is the original README from author pfalcon:
 
